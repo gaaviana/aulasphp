@@ -8,7 +8,6 @@ Este repositório contém materiais e explicações sobre conceitos fundamentais
 - Aprender a trabalhar com **variáveis** e **constantes**.
 - Entender a importância e o uso correto desses conceitos no desenvolvimento de aplicações PHP.
 
----
 
 ##  Sintaxe Básica em PHP
 
