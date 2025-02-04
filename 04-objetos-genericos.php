@@ -12,10 +12,15 @@
     <?php
     // criando uma instancia de uma classe generica chamada stdClass (Stander Class)
     $usuario = new stdClass();
+
+    $usuario->nome = "gaa";
+    $usuario->idade = 19;
+    $usuario->email = "gaa@gmail.com";
+    $usuario->telefone = ["11-96659-5738"]
     ?>
 
     <h2>Anlisando a estrutura de objetos</h2>
     <pre><?=var_dump($usuario)?></pre>
-    
+
 </body>
 </html>
