@@ -33,6 +33,28 @@
     <p>idade: <?=$ususario->idade?></p>
     <p>celular: <?=$usuario->telefone[1]?></p>
 
+    <hr>
+
+    <h2>Convertendo (fazendo um casting) objeto em array associativo</h2>
+
+    <?php
+    $arrayUsuario = (array) $usario;
+    ?>
+
+    <h3>Analisando o array gerado a partir de um objeto</h3>
+    <pre><?=var_dump($arrayUsuario)?></pre>
+
+    <h2>convertendo (fazendo um casting) array associativo em objetos</h2>
+
+    <?php
+    $aluno = ["nome" => "aaaa", "sobrenome" => "bbbbbbbb"];
+
+    $objAluno = (object) $aluno;
+    ?>
+
+    <h3>Analisando o objeto gerado a partir de um array</h3>
+    <pre><?=var_dump($objAluno)?></pre>
+
 
 </body>
 </html>
