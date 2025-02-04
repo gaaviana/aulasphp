@@ -18,6 +18,10 @@
     if($numero > 1){
         echo "<p>$numero é maior que 1</p>";
     }
+
+    // Sintaxe omitindo as chaves
+
+    if($numero > 1)  echo "<p>$numero é maior que 1</p>";
     ?>
     
 </body>
