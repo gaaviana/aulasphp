@@ -16,11 +16,23 @@
     $usuario->nome = "gaa";
     $usuario->idade = 19;
     $usuario->email = "gaa@gmail.com";
-    $usuario->telefone = ["11-96659-5738"]
+    $usuario->telefone = ["11-96659-5738", "25629292"];
+
+    echo $usuario->nome;
+
+    echo "<p><mark>{$usuario->nome}</mark></p>";
     ?>
+
 
     <h2>Anlisando a estrutura de objetos</h2>
     <pre><?=var_dump($usuario)?></pre>
+    <hr>
+
+    <h2>Saida de dados</h2>
+    <p>Nome: <?=$usuario->nome?></p>
+    <p>idade: <?=$ususario->idade?></p>
+    <p>celular: <?=$usuario->telefone[1]?></p>
+
 
 </body>
 </html>
