@@ -43,20 +43,27 @@
 
     <?php
     $produto = "Ultrabook Asus";
-    $qtdEmEstoque = 10; 
+    $qtdEmEstoque = 0; 
     $qtdCritica = 5;
+    ?>
 
-    echo "<h3>$produto</h3>";
-    echo "<h4>Quantidade em estoque: $qtdEmEstoque</h4>";
+    <h3><?=$produto?></h3>
+    <h4>Quantidade em estoque: <?=$qtdEmEstoque?></h4>
 
+    <?php
     if ($qtdEmEstoque < $qtdCritica) {
-        echo "<p class = 'comprar'>é necessário comprar!</p>";
-
+    ?>
+        <p class = 'comprar'>é necessário comprar!</p>
+    <?php
         if ($qtdEmEstoque === 0) {
-            echo "<p class = 'urgente' ><strong>URGENTE!!</strong></p>";
+    ?>
+        <p class = 'urgente' ><strong>URGENTE!!</strong></p>
+    <?php
         }
     } else {
-        echo "<p class = 'normal'>Estoque normal</p>";
+    ?>
+        <p class = 'normal'>Estoque normal</p>
+    <?php
     }
     ?>
 
