@@ -38,13 +38,13 @@
     
     <?php
     $produto = "Goiaba";
-    $preco = 2000;
+    $preco = 6000;
 
-    if ($preco >= 5000) {
+    if ($preco > 5000) {
         $percentual =  0.15;
-    } elseif ($preco >= 3000) {
+    } elseif ($preco > 3000) {
         $percentual =  0.10;
-    } elseif ($preco >= 1000) {
+    } elseif ($preco > 1000) {
         $percentual =  0.05;
     } else {
         $percentual = 0;
@@ -52,7 +52,6 @@
 
     $desconto = $preco * $percentual;
     $valorFinal = $preco - $desconto;
-    $valorFinal = number_format($valorFinal, 2, ',', '.');
     ?>
 
     <table>
@@ -67,9 +66,9 @@
         <tbody>
             <tr>
                 <td><?=$produto?></td>
-                <td><?=$preco?></td>
-                <td class="desconto"><?=$desconto?></td>
-                <td class="valorFinal"><?=$valorFinal?></td>
+                <td>R$ <?=number_format($preco, 2, ',', '.')?></td>
+                <td class="desconto"><?=$percentual?>% ( R$<?=number_format($desconto, 2, ',', '.')?> )</td>
+                <td class="valorFinal">R$ <?=number_format($valorFinal, 2, ',', '.')?></td>
             </tr>
         </tbody>
     </table>
