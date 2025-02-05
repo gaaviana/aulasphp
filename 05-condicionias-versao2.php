@@ -31,12 +31,10 @@
     $numero = 5;
     
     if($numero > 1){
-        echo "<p>$numero é maior que 1</p>";
-    }
-
-    // Sintaxe omitindo as chaves
-
-    if($numero > 1)  echo "<p>$numero é maior que 1</p>";
+    ?>    
+    <p><?=$numero?> é maior que 1</p>
+    <?php    
+    } 
     ?>
 
     <hr>
