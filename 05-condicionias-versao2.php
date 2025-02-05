@@ -76,17 +76,17 @@
     $idade = 25;
 
     if ($idade <= 12) {
-        echo "<p>Criança</p>";
+        $mensagem = "Criança";
     } elseif ($idade <= 17) {
-        echo "<p>Adolescente</p>";
+        $mensagem = "Adolescente";
     } elseif ($idade <= 59) {
-        echo "<p>Adulto</p>";
+        $mensagem = "Adulto";
     } else {
-        echo "<p>Idosa</p>";
-    }
-
-    
+        $mensagem = "Idosa";
+    }    
     ?>
+    <P><?=$mensagem?></P>
+
     
 </body>
 </html>
