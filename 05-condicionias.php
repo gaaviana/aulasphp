@@ -24,6 +24,8 @@
     if($numero > 1)  echo "<p>$numero é maior que 1</p>";
     ?>
 
+    <hr>
+
     <h2>Composta</h2>
 
     <?php
@@ -40,6 +42,8 @@
         echo "<p>Estoque normal</p>";
     }
     ?>
+
+    <hr>
     
 </body>
 </html>
