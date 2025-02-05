@@ -7,6 +7,7 @@
     <style>
         body {
             text-align: center;
+            font-family: 'Times New Roman', Times, serif
         }
         table {
             text-align: center;
@@ -37,20 +38,21 @@
     
     <?php
     $produto = "Goiaba";
-    $preco = "9000";
+    $preco = 2000;
 
     if ($preco >= 5000) {
-        $desconto = $preco * 0.15;
+        $percentual =  0.15;
     } elseif ($preco >= 3000) {
-        $desconto = $preco * 0.10;
+        $percentual =  0.10;
     } elseif ($preco >= 1000) {
-        $desconto = $preco * 0.05;
+        $percentual =  0.05;
     } else {
-       $desconto = $preco * 0;
+        $percentual = 0;
     }
 
+    $desconto = $preco * $percentual;
     $valorFinal = $preco - $desconto;
-    $precoFormatado = number_format($valorFinal, 2, ',', '.');
+    $valorFinal = number_format($valorFinal, 2, ',', '.');
     ?>
 
     <table>
@@ -67,7 +69,7 @@
                 <td><?=$produto?></td>
                 <td><?=$preco?></td>
                 <td class="desconto"><?=$desconto?></td>
-                <td class="valorFinal"><?=$precoFormatado?></td>
+                <td class="valorFinal"><?=$valorFinal?></td>
             </tr>
         </tbody>
     </table>
