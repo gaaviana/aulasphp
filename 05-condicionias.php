@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP - condicionais</title>
+    <style>
+        .comprar {
+            color: red;
+        }
+
+        .urgente {
+            color: red;
+            background-color: yellow;
+        }
+
+        .normal {
+            color: darkgreen;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Estrutura condicionais</h1>
@@ -37,9 +52,13 @@
     echo "<h4>Quantidade em estoque: $qtdEmEstoque</h4>";
 
     if ($qtdEmEstoque < $qtdCritica) {
-        echo "<p>é necessário comprar!</p>";
+        echo "<p class = 'comprar'>é necessário comprar!</p>";
+
+        if ($qtdEmEstoque === 0) {
+            echo "<p class = 'urgente' ><strong>URGENTE!!</strong></p>";
+        }
     } else {
-        echo "<p>Estoque normal</p>";
+        echo "<p class = 'normal'>Estoque normal</p>";
     }
     ?>
 
