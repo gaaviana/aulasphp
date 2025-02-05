@@ -41,7 +41,7 @@
 
     <hr>
 
-    <h2>Composta</h2>
+    <h2>Composta usando <code>if</code> e <code>else</code></h2>
 
     <?php
     $produto = "Ultrabook Asus";
@@ -63,6 +63,25 @@
     ?>
 
     <hr>
+
+    <h2>Encadeada usando <code>if/else/ifelse</code></h2>
+    <!-- Verificar a idade de uma epssoa e determinar se ele é crinaça, adolescente, adulta ou idosa -->
+
+    <?php
+    $idade = 25;
+
+    if ($idade <= 12) {
+        echo "<p>Criança</p>";
+    } elseif ($idade <= 17) {
+        echo "<p>Adolescente</p>";
+    } elseif ($idade <= 59) {
+        echo "<p>Adulto</p>";
+    } else {
+        echo "<p>Idosa</p>";
+    }
+
+    
+    ?>
     
 </body>
 </html>
