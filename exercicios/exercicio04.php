@@ -34,7 +34,7 @@
         <tr>
             <th>ID</th>
             <th>LINGUAGEM</th>
-            <th>DESCERIÇÃO</th>
+            <th>DESCRIÇÃO</th>
         </tr>
     </thead>
     <tbody>
