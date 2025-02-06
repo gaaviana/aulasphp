@@ -99,6 +99,19 @@ for($i = 1; $i <= 10; $i++){
     }
     ?>
 </ol>
+
+    <h2>FOREACH (PARA CADA)</h2>
+    <p>Versão simplificada do loop for e bem mais fácil de usar com arrays e objetos.</p>
+
+<?php
+$alunos = ["Denis", "Paulo", "Heloisa"];
+
+foreach ($alunos as $aluno) {
+?>
+    <p>Nome: <?=$aluno?></p>
     
+<?php
+}
+?>
 </body>
 </html>
