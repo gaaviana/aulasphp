@@ -48,16 +48,16 @@ $dados = [
     "Java" => "Softwares"
 ];
 
-$i = 1;
+$id = 1;
 foreach ($dados as $linguagem => $descricao) {  
 ?>
     <tr>
-        <td><?=$i?></td>
+        <td><?=$id?></td>
         <td><?=$linguagem?></td>
         <td><?=$descricao?></td>
     </tr>
 <?php
-$i++;
+$id++;
 };
 ?>
     </tbody>
