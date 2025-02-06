@@ -19,9 +19,13 @@ $media = 9;
 $faltas = 10;
 
 if ($media >= 7 && $faltas <= 10) {
-    echo "<p>Aprovado !</p>";
+?>
+    <p>Aprovado !</p>
+<?php
 } else {
-    echo "<p>Reprovado !</p>";
+?>
+    <p>Reprovado !</p>
+<?php
 }
 ?>
 
@@ -34,11 +38,14 @@ $clienteVip = true; //valor/tipo logico/booleean
 $temCupom = false;
 
 if ($clienteVip || $temCupom) {
-    echo "<p>Desconto aplicado!</p>";
+?>
+    <p>Desconto aplicado!</p>
+<?php
 } else {
-    echo "<p>Sem desconto!</p>";
+?>
+    <p>Sem desconto!</p>
+<?php
 }
-
 ?>
 
     <h2>! (NÃO/NOT)</h2>
@@ -49,11 +56,14 @@ if ($clienteVip || $temCupom) {
 $usuarioLogado = true;
 
 if (!$usuarioLogado) {
-    echo "<a href='login.php'>Login</a>";
+?>
+    <a href='login.php'>Login</a>
+<?php
 } else {
-    echo "<span>Bem-vindo ao sistema!</span>";
+?>
+    <span>Bem-vindo ao sistema!</span>
+<?php
 }
-
 ?>
 
     <hr>
@@ -69,11 +79,14 @@ $acompanhado = true;
 $sobrio = true;
 
     if (($idade >= 18 || $acompanhado) && !$sobrio) {
-        echo "<p>Entrada permitida!</p>";
+?>
+        <p>Entrada permitida!</p>
+<?php
     } else {
-        echo "<p>Entrada negada!</p>";
-    }
-    
+?>
+        <p>Entrada negada!</p>
+<?php
+    }  
 ?>
 
 </body>
