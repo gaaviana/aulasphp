@@ -4,6 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP - loops</title>
+<!-- 
+    <style>
+        ol {
+            justify-content: center;
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            background-color: beige;
+            border: solid 1px;
+        }
+        li {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            border: solid 1px;
+            padding-top: 10px ;
+          
+            position: relative;
+        }
+
+        .calendario {
+            max-width: 150px ;
+            font-size: 20px;
+ 
+            padding-top: 10px ;
+            position: absolute;
+        }
+
+    </style> -->
 </head>
 <body>
     <h1>Trabalhando com comandos/laços de repetições</h1>
@@ -57,26 +87,13 @@ for($i = 1; $i <= 10; $i++){
 
 <ol>
     <?php
-    $meses = array(
-        "Janeiro",
-        "Fevereiro",
-        "Março",
-        "Abril",
-        "Maio",
-        "Junho",
-        "Julho",
-        "Agosto",
-        "Setembro",
-        "Outubro",
-        "Novembro",
-        "Dezembro"
-    );
+    $meses = array( "Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
     ?>
     <?php
     $a = 0;
     while ($a < 12) {
     ?>
-<li> <?=$meses[$a]?></li>
+<li> <?=$meses[$a]?> <!-- <p class="calendario">01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</p></li> -->
     <?php
         $a++;
     }
