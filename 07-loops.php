@@ -103,6 +103,7 @@ for($i = 1; $i <= 10; $i++){
     <h2>FOREACH (PARA CADA)</h2>
     <p>Versão simplificada do loop for e bem mais fácil de usar com arrays e objetos.</p>
 
+    <h3>Acessando array indexado/numerico</h3>
 <?php
 $alunos = ["Denis", "Paulo", "Heloisa"];
 
@@ -110,6 +111,22 @@ foreach ($alunos as $aluno) {
 ?>
     <p>Nome: <?=$aluno?></p>
     
+<?php
+}
+?>
+
+    <h3>Acessando array associativo</h3>
+<?php
+$clubes = [
+    "Corinthians" => "Cortinas",
+    "Palmeiras" => "Torneiras",
+    "São Paulo" => "trikas",
+    "Santos" => "Peixão malvadão 🐋"
+];
+
+foreach($clubes as $clube => $apelido) {
+?>
+    <p>O clube <?=$clube?> é conhecido como <?=$apelido?></p>
 <?php
 }
 ?>
