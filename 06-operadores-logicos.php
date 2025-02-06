@@ -42,6 +42,7 @@ if ($clienteVip || $temCupom) {
 ?>
 
     <h2>! (NÃO/NOT)</h2>
+    <p><i>É uma inversão de logica: VERDADEIRO vira <b>FALSO<b>, FALSO vira </b>VERDADEIRO</b></i></p>
 
 <?php
 // Se o usuario NÃO ESTIVER logadp, exibir o link/botão de LOGIN. Caso contrario, exibir uma saudação
@@ -53,6 +54,26 @@ if (!$usuarioLogado) {
     echo "<span>Bem-vindo ao sistema!</span>";
 }
 
+?>
+
+    <hr>
+    <h2>Usando os 3 Operadores combinados para uma logica mais elaborada</h2>
+
+<?php
+// Para entrar numa festa é necessario atender os seguintes criterios:
+// Idade mnima de 18 anos, ou estar acompanhado dos pais e não estar bebado
+
+//  Variaveis
+$idade = 16;
+$acompanhado = true;
+$sobrio = true;
+
+    if (($idade >= 18 || $acompanhado) && !$sobrio) {
+        echo "<p>Entrada permitida!</p>";
+    } else {
+        echo "<p>Entrada negada!</p>";
+    }
+    
 ?>
 
 </body>
