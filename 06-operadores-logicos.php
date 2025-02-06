@@ -27,8 +27,33 @@ if ($media >= 7 && $faltas <= 10) {
 
         <!-- O simbolo | é chamado de pipe -->
     <h2>|| (OU/OR)</h2>
+<?php
+// Dar desconto a um cliente que seja Vip ou que tenha cupom
+
+$clienteVip = true; //valor/tipo logico/booleean
+$temCupom = false;
+
+if ($clienteVip || $temCupom) {
+    echo "<p>Desconto aplicado!</p>";
+} else {
+    echo "<p>Sem desconto!</p>";
+}
+
+?>
 
     <h2>! (NÃO/NOT)</h2>
+
+<?php
+// Se o usuario NÃO ESTIVER logadp, exibir o link/botão de LOGIN. Caso contrario, exibir uma saudação
+$usuarioLogado = true;
+
+if (!$usuarioLogado) {
+    echo "<a href='login.php'>Login</a>";
+} else {
+    echo "<span>Bem-vindo ao sistema!</span>";
+}
+
+?>
 
 </body>
 </html>
