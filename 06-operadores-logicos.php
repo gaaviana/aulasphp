@@ -57,7 +57,7 @@ $usuarioLogado = true;
 
 if (!$usuarioLogado) {
 ?>
-    <a href='login.php'>Login</a>
+    <a href="">Login</a>
 <?php
 } else {
 ?>
