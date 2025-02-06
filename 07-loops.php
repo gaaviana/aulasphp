@@ -50,6 +50,35 @@ for($i = 1; $i <= 10; $i++){
 <?php
 }
 ?>
+
+<hr>
+<h2>Mini-exercicio</h2>
+<p>Crie um array contendo os 12 meses de ano e usando um dos loops que vimos, mostre os nomes dos mses em ua lista ordenada html</p>
+
+<?php
+$meses = array(
+    1 => "Janeiro",
+    2 => "Fevereiro",
+    3 => "Março",
+    4 => "Abril",
+    5 => "Maio",
+    6 => "Junho",
+    7 => "Julho",
+    8 => "Agosto",
+    9 => "Setembro",
+    10 => "Outubro",
+    11 => "Novembro",
+    12 => "Dezembro"
+);
+
+$a = 1;
+while ($a <= 12) {
+?>
+    <p><?=$meses[$a]?></p>
+<?php
+    $a++;
+}
+?>
     
 </body>
 </html>
