@@ -4,37 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio - 03</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: 'Times New Roman', Times, serif
-        }
-        table {
-            text-align: center;
-            border-collapse: collapse;
-            margin: auto;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-        td, th {
-            border: solid 1px;
-            padding: 10px;
-        }
-        
-        .desconto {
-            color: white;
-            background-color: red;
-            border: solid 1px black;
-        }
-
-        .valorFinal {
-            background-color: green;
-            color: white;
-            border: solid 1px black;
-        }
-    </style>
 </head>
-<body>
-    <h1>Exercício 03 (Condicionais)</h1>
+<body class="container text-center">
+    <h1 class="">Exercício 03 (Condicionais)</h1>
+    <hr>
     
     <?php
     $produto = "Goiaba";
@@ -54,23 +29,24 @@
     $valorFinal = $preco - $desconto;
     ?>
 
-    <table>
+    <table class="table table-bordered border-dark">
         <thead>
             <tr>
-                <th>Produto</th>
-                <th>Valor sem desconto</th>
-                <th class="desconto">Valor do desconto</th>
-                <th class="valorFinal">Valor final</th>
+                <th class="table-primary">Produto</th>
+                <th class="table-primary">Valor sem desconto</th>
+                <th class="table-primary">Valor do desconto</th>
+                <th class="table-primary">Valor final</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><?=$produto?></td>
                 <td>R$ <?=number_format($preco, 2, ',', '.')?></td>
-                <td class="desconto"><?=$percentual?>% ( R$<?=number_format($desconto, 2, ',', '.')?> )</td>
-                <td class="valorFinal">R$ <?=number_format($valorFinal, 2, ',', '.')?></td>
+                <td class="table-danger"><?=$percentual?>% ( R$<?=number_format($desconto, 2, ',', '.')?> )</td>
+                <td class="table-success">R$ <?=number_format($valorFinal, 2, ',', '.')?></td>
             </tr>
         </tbody>
     </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
