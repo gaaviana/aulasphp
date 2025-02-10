@@ -5,41 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP e HTML: Arrays</title>
-    <style>
-        html {
-            font-size: 18px;
-            font-family: 'Times New Roman', Times, serif
-        }
-
-        article {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-
-            h2 {
-                width: 100%;
-                text-align: center;
-                text-transform: uppercase;
-            }
-        }
-
-        div {
-            width: 40%;
-            padding: 10px;
-            border: solid 1px #000000;
-            border-radius: 10px;
-        }
-
-        div:hover {
-            transform: scale(1.05);
-            background-color: #D3D3D3;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="container">
 
-    <h1 style="text-align: center;">Exercicio 02 - Arrays</h1>
+    <h1 class="text-center"">Exercicio 02 - Arrays</h1>
 
     <hr>
 
@@ -63,26 +34,57 @@
     ];
     ?>
 
-    <article>
-        <h2>Dados de Usuarios</h2>
-
-        <div>
-            <p>Nome de usuario: <?= $pessoa02["nomeDeUsuario"] ?> </p>
-            <p>Email: <?= $pessoa02["email"] ?></p> 
-            <p>Idade: <?= $pessoa02["idade"] ?></p> 
-            <p>Sexo: <?= $pessoa02["sexo"] ?></p> 
+    <!-- <article>
+        
+        <div class="row gap-3">
+            <div class="col bg-success-subtle">
+                <p>Nome de usuario: <?= $pessoa02["nomeDeUsuario"] ?> </p>
+                <p>Email: <?= $pessoa02["email"] ?></p>
+                <p>Idade: <?= $pessoa02["idade"] ?></p>
+                <p>Sexo: <?= $pessoa02["sexo"] ?></p>
+            </div>
+            
+            <div class="col bg-success-subtle">
+                <p>Nome de usuario: <?= $pessoa01["nomeDeUsuario"] ?> </p>
+                <p>Email: <?= $pessoa01["email"] ?></p>
+                <p>Idade: <?= $pessoa01["idade"] ?></p>
+                <p>Sexo: <?= $pessoa01["sexo"] ?></p>
+            </div>
         </div>
-
-        <div>
-            <p>Nome de usuario: <?= $pessoa01["nomeDeUsuario"] ?> </p>
-            <p>Email: <?= $pessoa01["email"] ?></p> 
-            <p>Idade: <?= $pessoa01["idade"] ?></p> 
-            <p>Sexo: <?= $pessoa01["sexo"] ?></p> 
-        </div>
-    </article>
-
+    </article> -->
+    
+    <h2 class=" text-center">Dados de Usuarios</h2>
     <hr>
+    <div class="row gap-3">
+        <div class="card col" style="width: 18rem;">
+            <img src="../img/user.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Nome de usuario:</h5>
+                <p class="card-text"><?= $pessoa02["nomeDeUsuario"] ?></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Email: <?= $pessoa02["email"] ?></li>
+                <li class="list-group-item">Idade: <?= $pessoa02["idade"] ?></li>
+                <li class="list-group-item">Sexo: <?= $pessoa02["sexo"] ?></li>
+            </ul>
+        </div>
 
+        <div class="card col" style="width: 18rem;">
+            <img src="../img/user.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Nome de usuario:</h5>
+                <p class="card-text"><?= $pessoa01["nomeDeUsuario"] ?></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Email: <?= $pessoa01["email"] ?></li>
+                <li class="list-group-item">Idade: <?= $pessoa01["idade"] ?></li>
+                <li class="list-group-item">Sexo: <?= $pessoa01["sexo"] ?></li>
+            </ul>
+        </div>
+    </div>
+
+        <hr>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 
 </html>
