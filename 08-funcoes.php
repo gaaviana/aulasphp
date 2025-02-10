@@ -7,9 +7,22 @@
     <title>Funções</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 <body>
     <div class="container">
         <h1>Trabalhando com funções</h1>
+        <hr>
+
+        <h2>Função como procedimento (ou sub-rotina)</h2>
+        <p><i>procedimentos</i> <b>não retornam</b> nada.</p>
+        <hr>
+<?php
+function exibirDadosAutor(){
+    echo "<p>Fulano de Tal, <time>".date("d/m/y")."</time></p>";
+}
+?>
+        <h3>Chamada do procedimento</h3>
+        <div> <?=exibirDadosAutor()?> </div>
         <hr>
     </div>
 
