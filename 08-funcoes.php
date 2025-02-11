@@ -89,6 +89,34 @@
 
         <p>$mensagem 1: <?=exibirSaudacao("bom dia", "gabriel")?></p>
         <p>$mensagem 1: <?=exibirSaudacao("bom dia")?></p>
+
+        <hr>
+
+        <h2>Introdução de tipos de dados</h2>
+
+        <?php
+        //Indicando que o parâmetro DEVE ser do tipo inteiro, e que o retorno da função DEVE  ser do tipo string
+        function verificarNegativo(int $valor):string{
+            if ($valor < 0) {
+                return "É negativo";
+            } else {
+                return "Não é negativo";
+            }
+        }
+
+        /* Tipos comuns par uso de indução 
+        string = texto
+        int =  inteiro
+        float = real
+        array = vetor/matriz
+        object = objeto
+        */
+        ?>
+
+        <p>Numero 10: <?=verificarNegativo(10)?></p>
+        <p>Numero -10: <span class="badge text-bg-danger"><?=verificarNegativo(-10)?></span></p>
+
+        <!-- <p>Teste de valor/parametro errado: <?=verificarNegativo("aaa")?> </p> -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
