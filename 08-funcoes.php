@@ -98,10 +98,10 @@
         //Indicando que o parâmetro DEVE ser do tipo inteiro, e que o retorno da função DEVE  ser do tipo string
         function verificarNegativo(int $valor):string{
              if ($valor < 0) return "É negativo";
-             
+
             return "Não é negativo";
 
-            // return $valor < 0 ? "É negativo" : "Não é negativo";
+            // ret    urn $valor < 0 ? "É negativo" : "Não é negativo";
        }
 
         /* Tipos comuns par uso de indução 
@@ -116,7 +116,34 @@
         <p>Numero 10: <?=verificarNegativo(10)?></p>
         <p>Numero -10: <span class="badge text-bg-danger"><?=verificarNegativo(-10)?></span></p>
 
-        <!-- <p>Teste de valor/parametro errado: <?=verificarNegativo("aaa")?> </p> -->
+        <!-- <p>Teste de valor/parametro errado: <//?=verificarNegativo("aaa")?> </p> -->
+
+        <hr>
+
+        <h2>Função anonima (ou Lambda)</h2>
+
+        <?php
+        $formatarPreco = function(float $valor):string{
+            $precoFormatado = "R$".number_format($valor, 2, ",",".");
+            return $precoFormatado;
+        };
+        ?>
+
+        <p><?=$formatarPreco(1000)?></p>
+        <p><?=$formatarPreco(1500.99)?></p>
+        <p><?=$formatarPreco(10500.9999)?></p>
+        <p><?=$formatarPreco(-1099)?></p>
+
+        <hr>
+
+        <h2>Arrow function (necessario usar fn)</h2>
+        <?php
+        //Util para funções simples de uma unica linha e com return implicito
+        $dobrarValor = fn(int $valor):int => $valor * 2;
+        ?>
+
+        <p><?=$dobrarValor(20)?></p>
+        <p><?=$dobrarValor(200)?></p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
