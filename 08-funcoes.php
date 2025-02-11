@@ -101,7 +101,7 @@
 
             return "Não é negativo";
 
-            // ret    urn $valor < 0 ? "É negativo" : "Não é negativo";
+            // return $valor < 0 ? "É negativo" : "Não é negativo";
        }
 
         /* Tipos comuns par uso de indução 
