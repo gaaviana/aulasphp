@@ -14,24 +14,24 @@
         <hr>
 
 <?php
-    $calculo = fn(float $nota1, $nota2, $nota3):float => ($nota1 + $nota2 + $nota3) / 3; 
+    $calcularMedia = fn(float $nota1, $nota2, $nota3):float => ($nota1 + $nota2 + $nota3) / 3; 
 
-    $media = $calculo(7,0,0);
+    $media = $calcularMedia(7,0,0);
   
 
-    function situacao($media){
-        if ($media < 7) return "reprovado";
+    function verificarSituacao($media){
+        if ($media >= 7) return "Aprovado";
             
-        return "aprovado";
+        return "Reprovado";
     }
 
 
     $alunos = [
-        "gaa" => $calculo(4,3,0),
-        "fasdf" => $calculo(0,10,0),
-        "adfdsaf" => $calculo(7,10,8),
-        "fsdfd" => $calculo(10,5,4),
-        "Afsdfxcv" => $calculo(5,1,7)
+        "gaa" => $calcularMedia(10,9,8),
+        "fasdf" => $calcularMedia(7,10,5),
+        "adfdsaf" => $calcularMedia(7,6,8),
+        "fsdfd" => $calcularMedia(3,5,4),
+        "Afsdfxcv" => $calcularMedia(5,1,7)
     ];
 
 ?>
@@ -45,15 +45,15 @@
             </thead>
             <tbody>
             <?php
-foreach ($alunos as $aluno => $media) {
-    $mediaF = number_format($media, 1);
+foreach ($alunos as $aluno => $mediaAlunos) {
+    $mediaFormatada = number_format($mediaAlunos, 1);
  
-    $bgClass = ($media > 7) ? 'bg-primary-subtle' : 'bg-danger-subtle';
+    $bgClass = ($mediaAlunos >= 7) ? 'bg-primary-subtle' : 'bg-danger-subtle';
 ?>
     <tr>    
         <td><?=$aluno?></td>
-        <td><?=$mediaF?></td>
-        <td class="<?= $bgClass ?>"><?=situacao($media)?></td>
+        <td><?=$mediaFormatada?></td>
+        <td class="<?= $bgClass ?>"><?=verificarSituacao($mediaAlunos)?></td>
     </tr>
 <?php
 }
