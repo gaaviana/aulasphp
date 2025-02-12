@@ -48,7 +48,7 @@
 foreach ($alunos as $aluno => $mediaAlunos) {
     $mediaFormatada = number_format($mediaAlunos, 1);
  
-    $mediaCor = ($mediaAlunos >= 7) ? 'bg-primary-subtle' : 'bg-danger-subtle';
+    $mediaCor = ($mediaAlunos >= 7) ? 'badge bg-success text-light mt-1' : 'badge bg-danger text-light mt-1';
 ?>
     <tr>    
         <td><?=$aluno?></td>
