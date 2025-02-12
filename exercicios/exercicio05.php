@@ -48,12 +48,12 @@
 foreach ($alunos as $aluno => $mediaAlunos) {
     $mediaFormatada = number_format($mediaAlunos, 1);
  
-    $bgClass = ($mediaAlunos >= 7) ? 'bg-primary-subtle' : 'bg-danger-subtle';
+    $mediaCor = ($mediaAlunos >= 7) ? 'bg-primary-subtle' : 'bg-danger-subtle';
 ?>
     <tr>    
         <td><?=$aluno?></td>
         <td><?=$mediaFormatada?></td>
-        <td class="<?= $bgClass ?>"><?=verificarSituacao($mediaAlunos)?></td>
+        <td class="<?=$mediaCor?>"><?=verificarSituacao($mediaAlunos)?></td>
     </tr>
 <?php
 }
