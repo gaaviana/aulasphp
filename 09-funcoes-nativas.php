@@ -75,6 +75,9 @@
         "idade" => 18
     ];
 
+    $nome = "Viana";
+    echo $nome;
+
     extract($aluno);
     ?>
 
@@ -83,6 +86,74 @@
             <li>Nome: <?=$nome?></li>
             <li>Idade: <?=$idade?></li>
         </ul>
+
+        <hr>
+
+        <h3><code>array_sum()</code></h3>
+        <p>Somar valores de um array numerico</p>
+    <?php
+    $valores = [10, 20, 50, 1000, 500];
+    $total = array_sum($valores);
+    ?>
+        <p>Soma dos valores do array: <?=$total?></p>
+
+        <hr>
+
+        <h3><code>array_unique()</code></h3>
+        <p>Retorna um novo array com dados <b>únicos</b></p>
+
+    <?php
+    $produtos = [
+        "TV", "Notebook", "TV", "Geladeira", "Monitor", "Mouse", "Monitor", "Webcam"
+    ];
+
+    $produtosUnicos = array_unique($produtos);
+    ?>
+
+        <pre><?=var_dump($produtos)?></pre>
+        <pre><?=var_dump($produtosUnicos)?></pre>
+        <hr>
+
+        <h2>Numéricas</h2>
+        <h3><code>min(), max(), round()</code></h3>
+<?php
+$valorQualquer = 1259.75;
+?>
+
+    <p><?=min($valores)?></p>
+    <p><?=max($valores)?></p>
+    <p><?=round($valorQualquer)?></p>
+    <hr>
+
+    <h2>Filtros</h2>
+    <p>Recursos/funções/constantes de análise e limpeza de dados aplicados através das funções <code>filter_var()</code> e <code>filter_input()</code></p>
+
+    <h3>Validação</h3>
+<?php
+// exemplo de email estruturado erronemanete
+$emailErrado = "gaab.com.br";
+$emailCorreto = "gaab@gmail.com.br";
+?>
+
+    <p><?=var_dump(filter_var($emailErrado, FILTER_VALIDATE_EMAIL))?></p>
+    <p><?=var_dump(filter_var($emailCorreto, FILTER_VALIDATE_EMAIL))?></p>
+
+    <hr>
+
+    <h3>sinalização</h3>
+<?php
+$ataqueDeRaqui = "
+<script>
+    document.body.innerHTML = '<h1 style=background:yellow><marquee loop>Sou ráqui!!</marquee></h1>'
+</script>
+";
+
+// echo $ataqueDeRaqui;
+$ataqueSanitizado = filter_var($ataqueDeRaqui, FILTER_SANITIZE_SPECIAL_CHARS);
+echo $ataqueSanitizado;
+?>
+
+
 
 
     </div>
