@@ -38,6 +38,32 @@
 
         <p><?=$fraseFeia?></p>
         <p><?=$fraseBonita?></p>
+        <hr>
+
+        <h3><code>explode()</code></h3>
+        <p>Transformar uma string em um array</p>
+    <?php
+    $txtLinguagens = "HTML,CSS,JS,PHP,SQL";
+    $arrayLinguagens = explode(",", $txtLinguagens);
+    ?>
+    
+    <pre><?=var_dump($txtLinguagens)?></pre>
+    <pre><?=var_dump($arrayLinguagens)?></pre>
+    <hr>
+
+    <h2>Arrays</h2>
+
+    <h3><code>implode()</code></h3>
+    <p>Transformar array em string</p>
+
+    <?php
+    $arrayBandas = ["mo", "fome", "📌"];
+    $txtBandas  = implode(" - ", $arrayBandas);
+    ?>
+
+    <pre><?=var_dump($arrayBandas)?></pre>
+    <pre><?=var_dump($txtBandas)?></pre>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
