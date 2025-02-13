@@ -153,11 +153,55 @@ $ataqueSanitizado = filter_var($ataqueDeRaqui, FILTER_SANITIZE_SPECIAL_CHARS);
 echo $ataqueSanitizado;
 ?>
 
+    <hr>
+    <h2>Segurança (criptografia de dados)</h2>
+    <h3>Algoritmos e recursos</h3>
+    <ul>
+        <li>MD5</li>
+        <li>SHA-1</li>
+        <li>SHA-256</li>
+        <li><b>password_hash() e password_verify()</b></li>
+    </ul>
 
+    <?php
+    //plain text
+    $senhaTextoPuro = "123senac";
 
+    //MD5
+    $senhaCodificadaMD5 = md5($senhaTextoPuro);
 
+    //SHA1
+    $senhaCodificadaSHA1 = sha1($senhaTextoPuro);
+    
+    //SHA256
+    $senhaCodificadaSHA256 = hash('sha256', $senhaTextoPuro);
+    ?>
+        <hr>
+        <p>Senha texto puro: <?=$senhaTextoPuro?></p>
+        <p>Senha MD5: <?=$senhaCodificadaMD5?></p>
+        <p>Senha SHA-1: <?=$senhaCodificadaSHA1?></p>
+        <p>Senha SHA-256: <?=$senhaCodificadaSHA256?></p>
+
+        <hr>
+        <p class="alert alert-success"><i>Métoodo/Algoritm ideal atualmente</i></p>
+
+    <?php
+    $senhaCodificada = password_hash($senhaTextoPuro, PASSWORD_DEFAULT);
+    ?>
+        <p>Senha codificada com <code>password_hash()</code>: <?=$senhaCodificada?> (<?=strlen($senhaCodificada)?>)</p>
+
+        <h4>Comparando a senha informada com a senha codificada</h4>
+<?php
+// Simulando a digitação de senha num formulário
+$senhaDigitada = "123senac";
+if (password_verify($senhaDigitada, $senhaCodificada)) {
+    echo "Senha correta, pode entrar...";
+} else {
+    echo "Senha errada! Some daqui disgraça...";
+}
+ 
+?>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 </body>
 
