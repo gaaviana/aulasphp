@@ -16,10 +16,10 @@
       <h3><code>trim()</code></h3>
       <p>Remove espaços antes e depois de strings</p>
       
-      <?php
-      $txt = "      aaaaaaaaaa";
-      $txtSemEspaco = trim($txt);
-      ?>
+    <?php
+    $txt = "      aaaaaaaaaa";
+    $txtSemEspaco = trim($txt);
+    ?>
 
       <pre><?=var_dump($txt)?></pre>
       <pre><?=var_dump($txtSemEspaco)?></pre>
@@ -46,23 +46,44 @@
     $txtLinguagens = "HTML,CSS,JS,PHP,SQL";
     $arrayLinguagens = explode(",", $txtLinguagens);
     ?>
-    
-    <pre><?=var_dump($txtLinguagens)?></pre>
-    <pre><?=var_dump($arrayLinguagens)?></pre>
-    <hr>
 
-    <h2>Arrays</h2>
+        <pre><?=var_dump($txtLinguagens)?></pre>
+        <pre><?=var_dump($arrayLinguagens)?></pre>
+        <hr>
 
-    <h3><code>implode()</code></h3>
-    <p>Transformar array em string</p>
+        <h2>Arrays</h2>
+
+        <h3><code>implode()</code></h3>
+        <p>Transformar array em string</p>
 
     <?php
     $arrayBandas = ["mo", "fome", "📌"];
     $txtBandas  = implode(" - ", $arrayBandas);
     ?>
 
-    <pre><?=var_dump($arrayBandas)?></pre>
-    <pre><?=var_dump($txtBandas)?></pre>
+        <pre><?=var_dump($arrayBandas)?></pre>
+        <pre><?=var_dump($txtBandas)?></pre>
+
+        <hr>
+
+        <h3><code>extract()</code></h3>
+        <p>Extrai chaves associativas para variáveis</p>
+    <?php
+    $aluno = [
+        "id" => 1,
+        "nome" => "Gabriel",
+        "idade" => 18
+    ];
+
+    extract($aluno);
+    ?>
+
+        <ul>
+            <li>ID: <?=$id?></li>
+            <li>Nome: <?=$nome?></li>
+            <li>Idade: <?=$idade?></li>
+        </ul>
+
 
     </div>
 
