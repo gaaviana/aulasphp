@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos - Site com PHP</title>
+    <title>Duvidas - Site com PHP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
@@ -19,13 +19,18 @@
         </header>
 
         <main>    
-            <h2>Página de cursos</h2>
-            <p>Veja os cursos disponíveis:</p>
-            <ul>
-                <li>Culinária</li>
-                <li>Direção Defensiva</li>
-                <li>Como escapar de um terreoto</li>
-            </ul>
+            <h2>Página de dúvidas</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus error maxime natus in et quasi non? Cumque, quasi incidunt.</p>
+            
+            <h3>Principais dúvidas</h3>
+            <details>
+                <summary>Como se cadastrar?</summary>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, atque.</p>
+            </details>
+            <details>
+                <summary>Os cursos são gratiutos?</summary>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, consequuntur excepturi soluta ad ipsam ex?</p>
+            </details>
         </main>
 
         <footer>
