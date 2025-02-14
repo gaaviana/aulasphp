@@ -1,12 +1,13 @@
-</main>
-
-        <footer>
-            <p>Site criado para curso Téc. Informática para Internet.</p>
 <?php
 date_default_timezone_set('America/Sao_Paulo');
 
 $dataHora = date("d/m/y - H:i")
 ?>
+
+</main>
+
+        <footer class="bg-light text-center p-3">
+            <p>Site criado para curso Téc. Informática para Internet.</p>
             <p><?=$dataHora?></p>
         </footer>
         </div>
