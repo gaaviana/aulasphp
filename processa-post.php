@@ -11,7 +11,22 @@
     <div class="container">
         <h1>Processamento usando POST</h1>
         <hr>
-        <pre><?=var_dump($_POST)?></pre>
+<?php
+// Capturando os dados transmitidos
+
+$nome = $_POST ["nome"];
+$email = $_POST ["email"];
+$idade = $_POST ["idade"];
+$mensagem = $_POST ["mensagem"];
+?>
+        <h2>Dados:</h2>
+        <ul>
+            <li>Nome: <?=$nome?></li>
+            <li>Email: <?=$email?></li>
+            <li>Idade: <?=$idade?></li>
+            <li>mensagem: <?=$mensagem?></li>
+        </ul>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
