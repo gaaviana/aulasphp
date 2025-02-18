@@ -18,13 +18,30 @@ $nome = $_POST ["nome"];
 $email = $_POST ["email"];
 $idade = $_POST ["idade"];
 $mensagem = $_POST ["mensagem"];
-?>
+
+$interesses = $_POST ["interesses"];?>
         <h2>Dados:</h2>
         <ul>
             <li>Nome: <?=$nome?></li>
             <li>Email: <?=$email?></li>
             <li>Idade: <?=$idade?></li>
+
+            <!-- transformando o array em strings / utilizado para quando não precisa tratar os dados de forma individual -->
+            <li>interesses - usando <code>implode()</code>:
+                <?=implode(",", $interesses)?>
+            </li>
+
+            <li>interesses - usando <code>foreach()</code>:
+                <ul>
+                    <?php foreach($interesses as $interesse) { ?>
+                        <li><?=$interesse?></li>
+                    <?php }?>
+                </ul>
+            </li>
+
             <li>mensagem: <?=$mensagem?></li>
+
+
         </ul>
 
     </div>
