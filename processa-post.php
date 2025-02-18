@@ -11,6 +11,8 @@
     <div class="container">
         <h1>Processamento usando POST</h1>
         <hr>
+<?php if ($_POST["nome"] || $_POST["email"] === !null) {
+?>
 <?php
 // Capturando os dados transmitidos
 
@@ -28,7 +30,6 @@ $informativos = $_POST ["informativos"];
 // se houver interesses, os armazene. Caso o contrario, guarde array vazio
 $interesses = $_POST ["interesses"] ?? [];
 ?>
-
         <h2>Dados:</h2>
         <ul>
             <li>Nome: <?=$nome?></li>
@@ -37,7 +38,7 @@ $interesses = $_POST ["interesses"] ?? [];
 
 <!-- Usamos o empty com inversão de lógica (operador ! de negação).
  Portanto, se NÃO ESTÁ vazio, mostre os interesses.-->
-<?php if ( !empty($interesses) ) {?>
+<?php if ( !empty($interesses) ) { ?>
             <!-- transformando o array em strings / utilizado para quando não precisa tratar os dados de forma individual -->
             <li>interesses - usando <code>implode()</code>:
                 <?=implode(", ", $interesses)?>
@@ -50,13 +51,19 @@ $interesses = $_POST ["interesses"] ?? [];
                 <?php } ?>
                 </ul>
             </li>
-<?php }?>
+<?php } ?>
+
+        <?php if ( !empty($informativos)) { ?>
             <li>informativos: <?=$informativos?></li>
+        <?php }?>
             <li>mensagem: <?=$mensagem?></li>
+        
 
 
         </ul>
-
+<?php } else {
+    echo "Por favor preencha os campos nome e email";
+};?>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
