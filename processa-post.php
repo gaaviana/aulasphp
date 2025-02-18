@@ -18,6 +18,7 @@ $nome = $_POST ["nome"];
 $email = $_POST ["email"];
 $idade = $_POST ["idade"];
 $mensagem = $_POST ["mensagem"];
+$informativos = $_POST ["informativos"];
 
 // solução 1: aplicar um if/else ternário checando se existe algum interesse 
 // $interesses = isset($_POST ["interesses"]) ? $_POST["interesses"] : [];
@@ -50,7 +51,7 @@ $interesses = $_POST ["interesses"] ?? [];
                 </ul>
             </li>
 <?php }?>
-
+            <li>informativos: <?=$informativos?></li>
             <li>mensagem: <?=$mensagem?></li>
 
 
