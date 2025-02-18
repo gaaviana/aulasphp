@@ -19,25 +19,37 @@ $email = $_POST ["email"];
 $idade = $_POST ["idade"];
 $mensagem = $_POST ["mensagem"];
 
-$interesses = $_POST ["interesses"];?>
+// solução 1: aplicar um if/else ternário checando se existe algum interesse 
+// $interesses = isset($_POST ["interesses"]) ? $_POST["interesses"] : [];
+// se tiver dados coletar se não deixar como um array vazio
+
+// solução 2: usando o operador de coalescência nula ??
+// se houver interesses, os armazene. Caso o contrario, guarde array vazio
+$interesses = $_POST ["interesses"] ?? [];
+?>
+
         <h2>Dados:</h2>
         <ul>
             <li>Nome: <?=$nome?></li>
             <li>Email: <?=$email?></li>
             <li>Idade: <?=$idade?></li>
 
+<!-- Usamos o empty com inversão de lógica (operador ! de negação).
+ Portanto, se NÃO ESTÁ vazio, mostre os interesses.-->
+<?php if ( !empty($interesses) ) {?>
             <!-- transformando o array em strings / utilizado para quando não precisa tratar os dados de forma individual -->
             <li>interesses - usando <code>implode()</code>:
-                <?=implode(",", $interesses)?>
+                <?=implode(", ", $interesses)?>
             </li>
 
-            <li>interesses - usando <code>foreach()</code>:
+            <li>Interesses - usando <code>foreach()</code>:
                 <ul>
-                    <?php foreach($interesses as $interesse) { ?>
-                        <li><?=$interesse?></li>
-                    <?php }?>
+                <?php foreach($interesses as $interesse) { ?>
+                    <li> <?=$interesse?> </li>
+                <?php } ?>
                 </ul>
             </li>
+<?php }?>
 
             <li>mensagem: <?=$mensagem?></li>
 
