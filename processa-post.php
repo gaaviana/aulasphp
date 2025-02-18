@@ -16,10 +16,10 @@
 <?php
 // Capturando os dados transmitidos
 
-$nome = $_POST ["nome"];
-$email = $_POST ["email"];
-$idade = $_POST ["idade"];
-$mensagem = $_POST ["mensagem"];
+$nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+$email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+$idade =  filter_input(INPUT_POST, "idade", FILTER_SANITIZE_SPECIAL_CHARS);
+$mensagem = filter_input(INPUT_POST, "mensagem", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $informativos = $_POST ["informativos"];
 
 // solução 1: aplicar um if/else ternário checando se existe algum interesse 
@@ -28,7 +28,7 @@ $informativos = $_POST ["informativos"];
 
 // solução 2: usando o operador de coalescência nula ??
 // se houver interesses, os armazene. Caso o contrario, guarde array vazio
-$interesses = $_POST ["interesses"] ?? [];
+$interesses = filter_var_array($_POST ["interesses"] ?? [], (FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 ?>
         <h2>Dados:</h2>
         <ul>
